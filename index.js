@@ -3,6 +3,7 @@ const cors = require("cors")
 
 const jwt = require("jsonwebtoken")
 
+const port = process.env.PORT || 3333
 const secret = process.env.SECRET 
 
 const app = express()
@@ -41,7 +42,7 @@ app.get("/private", (req, res) =>{
     }
 })
 
-app.listen(3000, () =>{
+app.listen(port, () =>{
     console.log("secreto ", process.env.SECRET)
     console.log("Server actived")
 })
